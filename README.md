@@ -1,5 +1,7 @@
 # EpicTreasure - Batteries included CTF VM
 
+### Credit to [ctfhacker's original EpicTreasure](https://github.com/ctfhacker/EpicTreasure), I fixed it up and modified it for myself
+
 ## Tools included
 * [Pwntools](https://github.com/Gallopsled/pwntools)
 * [Pwndbg](https://github.com/zachriggle/pwndbg)
@@ -29,23 +31,22 @@ Check [VagrantUp](https://www.vagrantup.com/downloads.html) for information on i
 
 ### Fire up the VM
 ```
-git clone https://github.com/ctfhacker/epictreasure
-cd epictreasure
-mkdir host-share
+git clone https://github.com/teknogeek/EpicTreasure
+cd EpicTreasure
 vagrant up
 ... Go grab a coffee while we install all the things
 vagrant ssh
 ```
 
 ## Default settings
-By default, [my dotfiles](http://github.com/ctfhacker/dotfiles) are installed onto the VM. Simply comment out the following lines in et_setup.sh if you don't want my settings.
+By default, [ctfhacker's dotfiles](http://github.com/ctfhacker/dotfiles) are installed onto the VM. Simply comment out the following lines in et_setup.sh if you don't want his settings.
 
 ```
 # Personal config
 sudo sudo apt-get -y install stow
 cd /home/vagrant
 rm .bashrc
-git clone https://github.com/thebarbershopper/dotfiles
+git clone https://github.com/ctfhacker/dotfiles
 cd dotfiles
 ./install.sh
 ```

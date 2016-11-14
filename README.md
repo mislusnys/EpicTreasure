@@ -43,12 +43,14 @@ By default, [ctfhacker's dotfiles](http://github.com/ctfhacker/dotfiles) are ins
 
 ```
 # Personal config
-sudo sudo apt-get -y install stow
-cd /home/vagrant
+cd $HOMEDIR
+sudo apt-get -y install stow
 rm .bashrc
 git clone https://github.com/ctfhacker/dotfiles
-cd dotfiles
-./install.sh
+(
+  cd dotfiles
+  ./install.sh
+)
 ```
 
 #### Terminal
